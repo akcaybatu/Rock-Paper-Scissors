@@ -1,32 +1,33 @@
 function computerPlay(){
     let computerRPS = ["Rock", "Paper", "Scissors"];
-    let computerRandom = Math.floor(Math.random() * 3);
-    return computerRPS[computerRandom];
+    return computerRPS[Math.floor(Math.random() * 3)];
 }
 
 function playRound(playerSelection = prompt("Pick One!"), computerSelection = computerPlay()) {
-    if ((playerSelection.toLowerCase() == "rock" && computerSelection == "Scissors") || (playerSelection.toLowerCase() == "paper" && computerSelection == "Rock") || (playerSelection.toLowerCase() == "scissors" && computerSelection == "Paper")){
+    playerSelection.toLowerCase();
+    if ((playerSelection == "rock" && computerSelection == "Scissors") || 
+        (playerSelection == "paper" && computerSelection == "Rock") || 
+        (playerSelection == "scissors" && computerSelection == "Paper")) 
+    {
         return "You Win!";
     }
-    else if ((playerSelection.toLowerCase() == "rock" && computerSelection == "Paper") || (playerSelection.toLowerCase() == "paper" && computerSelection == "Scissors") || (playerSelection == "scissors" && computerSelection == "Rock")){
+    else if ((playerSelection == "rock" && computerSelection == "Paper") || 
+             (playerSelection == "paper" && computerSelection == "Scissors") || 
+             (playerSelection == "scissors" && computerSelection == "Rock"))
+    {
         return "You Lose!";
     }
-    else if ((playerSelection.toLowerCase() == "rock" && computerSelection == "Rock") || (playerSelection.toLowerCase() == "paper" && computerSelection == "Paper") || (playerSelection == "scissors" && computerSelection == "Scissors")){
+    else if (playerSelection.toLowerCase() == computerSelection.toLowerCase()){
         return "It's a Draw";
     }
-    else if (playerSelection = ""){
-        return "You didn't make a select";
-    }
     else{
-        return "Wrong word";
+        return "Please pick Rock, Paper or Scissors.";
     }
 }
 
-function game(){
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
+game = () =>{
+    for (let index = 0; index < 5; index++) {
+        console.log(playRound());       
+    }
 }
 game();
