@@ -1,0 +1,27 @@
+html{
+    background-color: #3C8DAD;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Helvetica, sans-serif;
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#buttons{
+
+
+}
+
+button{
+    border: 2px solid rgb(206, 215, 219);
+    background-color: rgb(38, 95, 128);
+    color: white;
+    width: 6.2rem;
+    height: 2.0rem;
+}
+
+#round{
+
+}
