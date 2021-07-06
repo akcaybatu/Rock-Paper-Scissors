@@ -12,9 +12,9 @@ function computerPlay(){
 }
 
 // Onclick, players choice function
-const buttons = document.querySelectorAll("#buttons > button");
-buttons.forEach((button) => {
-    button.addEventListener('click', function(e){
+const buttons = document.querySelectorAll("#buttons > div > input");
+buttons.forEach((input) => {
+    input.addEventListener('click', function(e){
         let playerSelection = e.target;
         let computerSelection = e.target;
         playRound(playerSelection, computerSelection);
@@ -52,10 +52,17 @@ function playRound(playerSelection, computerSelection) {
 // Check final score and stop game
 game = () => {
     if (playerScore == 5) {
-        round.textContent = "Youuuuuu Winnnnnn";
+        round.textContent = "You win the game. Congrats!";
+        playerScore = 0;
+        computerScore = 0;
+        scoreComputer.textContent = "Computer: ";
+        scoreHuman.textContent = "Human: ";
     }
     else if (computerScore == 5) {
-        round.textContent = "Youuuu Loseeeee";
+        round.textContent = "Oh no, computer wins...";
+        playerScore = 0;
+        computerScore = 0;
+        scoreComputer.textContent = "Computer: ";
+        scoreHuman.textContent = "Human: ";
     }
-    return;
 }

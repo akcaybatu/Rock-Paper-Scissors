@@ -1,5 +1,5 @@
 html{
-    background-color: #3C8DAD;
+    background-color: #0f1518;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Helvetica, sans-serif;
@@ -7,11 +7,20 @@ html{
     min-width: 100%;
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+#container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 130px;
 }
 
 #buttons{
-
-
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 button{
@@ -23,5 +32,83 @@ button{
 }
 
 #round{
-
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
 }
+
+.selections:hover{
+    animation: MoveUpDown 1s linear infinite;
+    left: 0;
+    bottom: 0;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-around;
+}
+
+p{
+    font-family: 'Poppins';
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-family: "Yellowtail", sans-serif;
+    font-weight: 100;
+    font-size: 3.7rem;
+    animation: pulsate 0.0000001s ease-in-out infinite alternate;    
+}
+
+#page-end{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 230px;
+    border-top: 2px solid rgb(255, 255, 255, 0.3);
+}
+
+@keyframes pulsate {
+100% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #5271ff,
+    0 0 80px #5271ff,
+    0 0 90px #5271ff,
+    0 0 100px #5271ff,
+    0 0 150px #5271ff;    
+}
+    
+0% {  
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #5271ff,
+    0 0 73px #5271ff,
+    0 0 80px #5271ff,
+    0 0 94px #5271ff,
+    0 0 140px #5271ff;
+  }
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }

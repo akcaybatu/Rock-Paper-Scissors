@@ -6,24 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Yellowtail:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1>Rock, Paper, Scissors</h1>
     <div id="container">
+        <h1>Rock, Paper, Scissors</h1>
+        <p id="round">Round</p>
+        <!--<input type="image" src="sources/rock-text.png">
+        <a href="https://www.vecteezy.com/free-vector/hand-gestures">Hand Gestures Vectors by Vecteezy</a>
         <div id="buttons">
-            <button id="btnR">
+            <button id="btnR" class="btn">
                 Rock
             </button>
-            <button id="btnP">
+            <button id="btnP" class="btn">
                 Paper
             </button>
-            <button id="btnS">
+            <button id="btnS" class="btn">
                 Scissors
             </button>
+        </div>-->
+        <div id="buttons">
+            <div id="btnR" class="selections">
+                <input type="image" src="sources/rock.png" class="image">
+            </div>
+            <div id="btnP" class="selections">
+                <input type="image" src="sources/paper.png" class="image">
+            </div>
+            <div id="btnS" class="selections">
+                <input type="image" src="sources/scissors.png" class="image">
+            </div>
         </div>
-        <p id="round">Round</p>
-        <p id="scoreHuman">Human: </p>
-        <p id="scoreComputer">Computer: </p>
+        <div class="scores">
+            <p id="scoreHuman">Human: </p>
+            <p id="scoreComputer">Computer: </p>
+        </div>
+
+    </div>
+    <div id="page-end">
+        <p>Made by Batuhan Akçay</p>
+        <p><a href="https://www.vecteezy.com/free-vector/hand-gestures">Hand Gestures Vectors by Vecteezy</a></p>
     </div>
     <script src="script.js"></script>
 </body>
