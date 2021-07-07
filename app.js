@@ -33,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
     {
         round.textContent = "You Win";
         playerScore++;
-        instantScoreHuman.textContent = "You: " + playerScore;
+        instantScorePlayer.textContent = "You: " + playerScore;
     }
     else if ((playerSelection == rock && computerSelection == "Paper") || 
              (playerSelection == paper && computerSelection == "Scissors") || 
@@ -55,14 +55,14 @@ game = () => {
         round.textContent = "You win the game. Congrats!";
         playerScore = 0;
         computerScore = 0;
-        instantScoreComputer.textContent = "Computer: ";
-        instantScoreHuman.textContent = "You: ";
+        instantScoreComputer.textContent = "Computer: 0";
+        instantScorePlayer.textContent = "You: 0";
     }
     else if (computerScore == 5) {
         round.textContent = "Oh no, computer wins...";
         playerScore = 0;
         computerScore = 0;
-        instantScoreComputer.textContent = "Computer: ";
-        instantScoreHuman.textContent = "You: ";
+        instantScoreComputer.textContent = "Computer: 0";
+        instantScorePlayer.textContent = "You: 0";
     }
 }
